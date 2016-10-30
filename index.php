@@ -32,6 +32,8 @@
                         case "sausage rolls";
                             echo "You must be 21";
                             break;
+                        default:
+                         echo "YOu can't buy";
                     }
                     ?>
                 </p>
