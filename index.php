@@ -6,7 +6,7 @@
                 <p>
                     <?php
                     $myname = "Simeon";
-                    $myage = 15;
+                    $myage = 18;
 
                     if($myage >= 16 && $myage < 18){
                         print "You can buy specs!";
@@ -20,6 +20,19 @@
                       else{
                           print "Sorry you can't buy";
                       }
+
+                      $wantedgood = "mugs";
+                    switch($wantedgood){
+                        case "mugs":
+                            echo "You must have 18";
+                            break;
+                        case "specs":
+                            echo "You must have 16";
+                            break;
+                        case "sausage rolls";
+                            echo "You must be 21";
+                            break;
+                    }
                     ?>
                 </p>
             </body>
