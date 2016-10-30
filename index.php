@@ -5,11 +5,14 @@
             <body>
                 <p>
                     <?php
-                    echo "Hello,"." ". "world". "!";
-                    echo 5*7;
                     $myname = "Simeon";
-                    $myage = 24;
-                    echo "My name is ".$myname."And i am ".$myage;
+
+                    if($myname == "Ivan"){
+                        print "I know you!";
+                    }
+                     else{
+                         print "Who are you?";
+                     }
                     ?>
                 </p>
             </body>
