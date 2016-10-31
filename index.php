@@ -21,7 +21,7 @@
                           print "Sorry you can't buy";
                       }
 
-                      $wantedgood = "mugs";
+                      $wantedgood = "sausage rolls";
                     switch($wantedgood){
                         case "mugs":
                             echo "You must have 18";
