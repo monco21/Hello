@@ -17,7 +17,7 @@
 
                             for($i = 1; $i < 31; $i++){
                                 If($i%2 == 0){
-                                    echo "On the $i of the month Mugs are available";
+                                    echo "<br>On the $i of the month Mugs are available";
                                 }
 
 
