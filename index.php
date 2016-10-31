@@ -16,7 +16,7 @@
                             print "<p>$x</p>";
 
                             for($i = 1; $i < 31; $i++){
-                                If($i/2){
+                                If($i%2){
                                     echo "On the $i of the month Mugs are available";
                                 }
 
