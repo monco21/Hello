@@ -5,36 +5,11 @@
             <body>
                 <p>
                     <?php
-                    $myname = "Simeon";
-                    $myage = 18;
+                        $provisionedActivities = array("Specs", "Drugs", "Rock and Roll");
 
-                    if($myage >= 16 && $myage < 18){
-                        print "You can buy specs!";
-                    }
-                     elseif($myage >= 18 && $myage < 21 ){
-                         print "You can buy mugs";
-                     }
-                      elseif($myage >= 21){
-                          print "You can buy sausage rolls";
-                      }
-                      else{
-                          print "Sorry you can't buy";
-                      }
-
-                      $wantedgood = "sausage rolls";
-                    switch($wantedgood){
-                        case "mugs":
-                            echo "You must have 18";
-                            break;
-                        case "specs":
-                            echo "You must have 16";
-                            break;
-                        case "sausage rolls";
-                            echo "You must be 21";
-                            break;
-                        default:
-                         echo "YOu can't buy";
-                    }
+                        foreach($provisionedActivities as $x){
+                            print "<p>$x</p>";
+                        }
                     ?>
                 </p>
             </body>
