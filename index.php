@@ -16,13 +16,13 @@
                             print "<p>$x</p>";
 
                             for($i = 1; $i < 31; $i++){
-                                if($i%2){
+                                if($i/2){
                                     echo "On the $i of the month Specs are available";
                                 }
-                                elseif($i%3){
+                                elseif($i/3){
                                     echo "On the $i of the month Mugs are available";
                                 }
-                                elseif ($i%4){
+                                elseif ($i/4){
                                     echo "On the $i of the month Sausage Rolls are available";
                                 }
                                 else{
