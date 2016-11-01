@@ -38,7 +38,7 @@
                                     echo "<br> On the $i of the month Sausages are available";
                                 }
                                 else{
-                                    echo "On the $i of the month no products are available";
+                                    echo "<br>On the $i of the month no products are available";
                                 }
 
 
