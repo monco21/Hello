@@ -11,28 +11,14 @@
                            for ($i = 1; $i < 31; $i++) {
                                $thisMonthGoods = rand(0,2);
 
-                            if($thisMonthGoods == 0){
-                                if($mugsCount > 0) {
+                            if($thisMonthGoods == 0 && $mugsCount > 0){
                                     echo "<br> On the $i of the month Mugs are available";
-                                }else{
-                                    echo "<br> No more Mugs available this month";
-                                }
                             }
-                            elseif ($thisMonthGoods == 1){
-                                if($specsCount > 0) {
+                            elseif ($thisMonthGoods == 1 && $sausageCount > 0){
                                     echo "<br> On the $i of the month Specs are available";
-                                }
-                                else{
-                                    echo "<br> No more Mugs available this month";
-                                }
                             }
-                            elseif ($thisMonthGoods == 2){
-                                if($sausageCount > 0) {
+                            elseif ($thisMonthGoods == 2 && $sausageCount > 0){
                                     echo "<br>On the $i of the month Sausage are available";
-                                }
-                                else{
-                                    echo "<br> No more Mugs available this month";
-                                }
                             }
                             else{
                                 echo "<br>No more goods are available this month";
