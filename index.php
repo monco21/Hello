@@ -13,12 +13,15 @@
 
                             if($thisMonthGoods == 0 && $mugsCount > 0){
                                     echo "<br> On the $i of the month Mugs are available";
+                                $mugsCount--;
                             }
                             elseif ($thisMonthGoods == 1 && $sausageCount > 0){
                                     echo "<br> On the $i of the month Specs are available";
+                                $sausageCount--;
                             }
                             elseif ($thisMonthGoods == 2 && $sausageCount > 0){
                                     echo "<br>On the $i of the month Sausage are available";
+                                $sausageCount--;
                             }
                             else{
                                 echo "<br>No more goods are available this month";
