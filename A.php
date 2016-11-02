@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-<p>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -24,6 +24,6 @@ while($row = $result->fetch_array()){
 
 
 ?>
-</p>
+
 </body>
 </html>
