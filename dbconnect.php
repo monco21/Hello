@@ -13,6 +13,14 @@ define('DB_DATABASE','sms');
 
 $db=mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
+$db=new nysqli(
+    'eu-cdbr-azure-north-e.cloudapp.net',
+    'bf059db43a1be2',
+    'a1369579',
+    'sms'
+);
+
+
 if($db->connect_errno){
     die('Connectfailed['.$db->connect_error.']');
 }
