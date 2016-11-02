@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 <body>
+<p>
 <?php
 /**
  * Created by PhpStorm.
@@ -26,4 +31,6 @@ $result->dose();
 $db->dose();
 
 ?>
+</p>
 </body>
+</html>
