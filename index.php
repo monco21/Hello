@@ -12,7 +12,7 @@
                                $thisMonthGoods = rand(0,2);
 
                             if($thisMonthGoods == 0 && $mugsCount > 0){
-                                    echo "<br> On the $i of the month Mugs are availabl";
+                                    echo "<br> On the $i of the month Mugs are x";
                                 $mugsCount--;
                             }
                             elseif ($thisMonthGoods == 1 && $sausageCount > 0){
