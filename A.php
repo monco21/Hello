@@ -17,7 +17,7 @@ $result = $db->query($sql_query);
 
 
 while($row = $result->fetch_array()){
-    echo " $row[title]  ";
+    echo " $row[title]  ---- $row[productionStudio]  ";
     echo "<br>";
 }
 
