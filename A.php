@@ -1,3 +1,4 @@
+<body>
 <?php
 /**
  * Created by PhpStorm.
@@ -24,3 +25,5 @@ while($row = $result->fetch_array()){
 $result->dose();
 $db->dose();
 
+?>
+</body>
