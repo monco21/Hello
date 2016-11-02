@@ -11,7 +11,7 @@
  * Date: 2.11.2016 г.
  * Time: 15:38
  */
-
+include("dbconnect.php");
 $sql_query = "SELECT*FROM marvelmovies";
 $result = $db->query($sql_query);
 
