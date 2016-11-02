@@ -6,9 +6,13 @@
  * Time: 15:00
  */
 
-define('DB_SERVER','servername');
-define('DB_USERNAME','username');
-define('DB_PASSWORD','password');
-define('DB_DATABASE','database');
+define('DB_SERVER','eu-cdbr-azure-north-e.cloudapp.net');
+define('DB_USERNAME','bf059db43a1be2');
+define('DB_PASSWORD','a1369579');
+define('DB_DATABASE','sms');
 
 $db=mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+
+if($db->connect_errno){
+    die('Connectfailed['.$db->connect_error.']');
+}
