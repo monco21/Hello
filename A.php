@@ -22,5 +22,5 @@ while($row = $result->fetch_array()){
 }
 
 $result->dose();
-db->dose();
+$db->dose();
 
