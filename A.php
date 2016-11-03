@@ -23,7 +23,7 @@ $result3 = $db->query($sql_query3);
 
 
         while($row = $result2->fetch_array()) {
-            echo " $row[title]----$row[productionStudio]----$row[yearReleased]";
+            echo " $row[title]$row[productionStudio]----$row[yearReleased]";
             echo "<br>";
         }
 
