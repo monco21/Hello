@@ -15,12 +15,14 @@ include("dbconnect.php");
 $sql_query = "SELECT*FROM marvelmovies";
 $sql_query1 = "SELECT*FROM marvelmovies WHERE productionStudio LIKE '%Marvel Studio%'";
 $sql_query2 = "Select*FROM marvelmovies WHERE yearReleased > '2010'";
-$result = $db->query($sql_query1, $sql_query);
+$result = $db->query($sql_query1);
 $result2 = $db->query($sql_query);
 
 while($row = $result->fetch_array()){
-    echo " $row[title] --------- $row[productionStudio]" ;
-    echo "<br>";
+    while($row = $result2->fetch_array()) {
+        echo " $row[title] --------- $row[productionStudio]";
+        echo "<br>";
+    }
 }
 
 
