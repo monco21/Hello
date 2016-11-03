@@ -18,7 +18,7 @@
         $lastname = $row['lastname'];
         $gender = $row['gender'];
         $power = $row['power'];
-        echo "<li>{$firstname}{$lastname}{$gender}{$power}</li>>";
+        echo "<li>{$firstname}   {$lastname}  {$gender}   {$power}</li>>";
     }
     ?>
     </ul>
