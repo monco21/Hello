@@ -17,7 +17,7 @@ $result = $db->query($sql_query);
 
 
 while($row = $result->fetch_array()){
-    echo " $row[title]  ---- $row[productionStudio]  ";
+    echo " $row[title] "."--------".$sql_query = "SELECT*FROM marvelmovies WHERE productionStudio LIKE '%Marvel Studio%'";
     echo "<br>";
 }
 
