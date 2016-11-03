@@ -14,7 +14,7 @@
 include("dbconnect.php");
 $sql_query = "SELECT*FROM marvelmovies";
 $sql_query1 = "SELECT*FROM marvelmovies WHERE productionStudio LIKE '%Marvel Studio%'";
-$sql_query2 = "Select*FROM marvelmovies WHERE yearReleased > '2010'";
+$sql_query2 = "Select*FROM marvelmovies WHERE yearReleased > '2010' AND productionStudio LIKE '%Marvel Studio%'";
 $result = $db->query($sql_query1);
 $result1 = $db->query($sql_query);
 $result2 = $db->query($sql_query2);
