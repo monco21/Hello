@@ -23,7 +23,7 @@ while($row = $result1->fetch_array()){
     while($row = $result->fetch_array()) {
         while($row = $result2->fetch_array()) {
             echo " $row[title]----$row[productionStudio]----$row[yearReleased]";
-            echo "<br>";
+            echo "<br>,";
         }
     }
 }
