@@ -20,7 +20,7 @@ if(mysqli_query($db,$sql)){
     } else{
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
-    header("location:viewusers.php");
+    header("location:submitform.php");
 
 
 ?>
