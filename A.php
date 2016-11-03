@@ -13,11 +13,12 @@
  */
 include("dbconnect.php");
 $sql_query = "SELECT*FROM marvelmovies";
-$result = $db->query($sql_query);
+$sql_query1 = "SELECT*FROM marvelmovies WHERE productionStudio LIKE '%Marvel Studio%'";
+$result = $db->query($sql_query1);
 
 
 while($row = $result->fetch_array()){
-    echo " $row[title] "."--------".$sql_query = "SELECT*FROM marvelmovies WHERE productionStudio LIKE '%Marvel Studio%'";
+    echo " $row[title] "."--------" ;
     echo "<br>";
 }
 
