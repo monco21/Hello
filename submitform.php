@@ -6,7 +6,7 @@
  * Time: 13:57
  */
 
-include ("db_connect.php");
+include ("dbconnect.php");
 
 
 $firstname = $_POST["firstname"];
@@ -20,7 +20,7 @@ if(mysqli_query($db,$sql)){
     } else{
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
-    header("location:submitform.php");
+    header("location:viewusers.php");
 
 
 ?>
