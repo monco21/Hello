@@ -15,11 +15,8 @@ $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
 
-$sql = 'SELECT * FROM users WHERE username = $username';
-
-$result=mysqli_query($sql);
-
-if(mysqli_num_rows($result)>0)
+$sql=mysqli_query("SELECT FROM users (username, password, email) WHERE username=$username");
+if(mysql_num_rows($sql)>=1)
 {
     echo"name already exists";
 }
@@ -31,6 +28,10 @@ else
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
 }
+
+
+
+
 
 
 header("location:userView.php");
