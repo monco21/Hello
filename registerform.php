@@ -14,15 +14,6 @@
     <link rel="stylesheet" type="text/css" href="registerHtml.css">
 </head>
 <body>
-
-
-
-
-
-<?php
-echo "My first PHP script!";
-?>
-
 <br id="wrapper">
     <nav class="navbar navbar-fixed-top navbar-absolute navbar-transparent big">
         <div class="container-fluid">
@@ -81,6 +72,12 @@ echo "My first PHP script!";
 
             <input class="registerbtn" type="submit" value="Register">
             <button class="cancelbtn" type="button" class="cancelbtn">Cancel</button>
+
+
+
+            <?php
+            echo "My first PHP script!";
+            ?>
         </div>
     </form>
 </div>
