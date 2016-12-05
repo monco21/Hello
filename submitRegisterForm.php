@@ -14,15 +14,22 @@ $email = $_POST["email"];
 $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
-$sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
 
-if(mysqli_query($db,$sql)){
-} else{
-    echo "Error: ".$sql."<br>".mysqli_error($db);
+$sql= ("SELECT FROM users (username, password, email, phoneNumber,typeOfUser) WHERE username=$username");
+if(mysql_num_rows($sql)>=1)
+{
+    echo"name already exists";
 }
+else
+{
+    $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
+}
+
+
+
+    if(mysqli_query($db,$sql)){
+    } else{
+        echo "Error: ".$sql."<br>".mysqli_error($db);
+    }
 header("location:userView.php");
-
-
-
-
 ?>
