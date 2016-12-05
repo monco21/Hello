@@ -25,6 +25,7 @@ if(mysqli_num_rows($result)>0)
     } else{
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
+    header("location:userView.php");
 }
 else
 {
@@ -32,7 +33,7 @@ else
     echo 'alert("message successfully sent")';
     echo '</script>';
 }
-header("location:userView.php");
+
 
 
 
