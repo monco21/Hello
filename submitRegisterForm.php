@@ -16,8 +16,15 @@ $typeOfUser = $_POST["typeOfUser"];
 
 
 $sql = 'SELECT * FROM users WHERE username = $username';
+
 $result=mysqli_query($sql);
 
+while($row = $result->fetch_array()){
+    $username = $row['username'];
+
+    echo "<li>{$username} </li>>";
+}
+/*
 if(mysqli_num_rows($result)>0)
 {
     echo"name already exists";
@@ -31,8 +38,9 @@ else
     }
 
 }
-header("location:userView.php");
 
+header("location:userView.php");
+*/
 
 
 
