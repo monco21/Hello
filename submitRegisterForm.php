@@ -16,7 +16,7 @@ $typeOfUser = $_POST["typeOfUser"];
 
 
 $sql = 'SELECT * FROM users WHERE username = $username';
-$result=mysqli_query($sql);
+ $result=mysqli_query($sql);
 
 if(mysqli_num_rows($result)>0)
 {
@@ -30,7 +30,7 @@ if(mysqli_num_rows($result)>0)
 else
 {
     echo '<script language="javascript">';
-    echo 'alert($result)';
+    echo 'alert(result)';
     echo '</script>';
 }
 
