@@ -1,4 +1,7 @@
+
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <title>Bootstrap Example</title>
@@ -11,7 +14,16 @@
     <link rel="stylesheet" type="text/css" href="registerHtml.css">
 </head>
 <body>
-<div id="wrapper">
+
+
+
+
+
+<?php
+echo "My first PHP script!";
+?>
+
+<br id="wrapper">
     <nav class="navbar navbar-fixed-top navbar-absolute navbar-transparent big">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -36,7 +48,7 @@
         </div>
     </nav>
 
-    <form action="submitRegisterForm.php" onsubmit="return myFunction()" method="post">
+    < action="submitRegisterForm.php" onsubmit="return myFunction()" method="post">
 
         <div class="container">
             <label class="username"><b>Enter Username:</b></label>
@@ -70,11 +82,10 @@
             <input class="registerbtn" type="submit" value="Register">
             <button class="cancelbtn" type="button" class="cancelbtn">Cancel</button>
         </div>
-
-
-
     </form>
 </div>
+
+
 <footer class="container-fluid text-center">
     <p>Footer Text</p>
 </footer>
