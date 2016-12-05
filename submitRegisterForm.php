@@ -15,14 +15,20 @@ $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
 
-$sql_query="SELECT*FROM users WHERE username = $username";
-$result = $db->query($sql_query);
+    $sql = 'SELECT * FROM users WHERE username = $username';
+$result=mysqli_query($sql);
 
-if($row = $result->fetch_array()){
-    echo "User name exist";
+if(mysqli_num_rows($result)!=0)
+{
+    echo"name already exists";
+}
+else
+{
+    $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
 }
 
-$sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
+
+
 
 if(mysqli_query($db,$sql)){
 } else{
