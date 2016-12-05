@@ -36,23 +36,23 @@
         </div>
     </nav>
 
-    <form action="submitRegisterForm.php" method="post">
+    <form action="submitRegisterForm.php" onsubmit="return myFunction()" method="post">
 
         <div class="container">
             <label class="username"><b>Enter Username:</b></label>
             <input  type="text" placeholder="enter username:" name="username" required>
 
             <label class="password"><b>Enter Password:</b></label>
-            <input id="password1" type="text" placeholder="enter password:" name="password" required>
+            <input id="password1" type="password" placeholder="enter password:" name="password" required>
 
             <label class="repeatPassword"><b>Repeat Password:</b></label>
-            <input id="password2" type="text" placeholder="repeat password:" name="psw" required>
+            <input id="password2" type="password" placeholder="repeat password:" name="psw" required>
 
             <label class="email"><b>Email:</b></label>
-            <input  type="text" placeholder="email:" name="email" required>
+            <input  type="email" placeholder="email:" name="email" required>
 
             <label class="telephone"><b>Phone Number:</b></label>
-            <input  type="text"  placeholder="telephone:" name="phoneNumber">
+            <input  type="tel"  placeholder="telephone:" name="phoneNumber">
 
             <label class="chooseUser"><b>Type of user:</b></label>
 
