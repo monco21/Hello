@@ -30,7 +30,7 @@ if(mysqli_num_rows($result)>0)
 else
 {
     echo '<script language="javascript">';
-    echo 'alert("message successfully sent")';
+    echo 'alert($result)';
     echo '</script>';
 }
 
