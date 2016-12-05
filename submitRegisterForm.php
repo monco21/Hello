@@ -16,31 +16,23 @@ $typeOfUser = $_POST["typeOfUser"];
 
 
 $sql = 'SELECT * FROM users WHERE username = $username';
-
 $result=mysqli_query($sql);
 
-while($row = $result->fetch_array()){
-    $username = $row['username'];
-
-    echo "<li>{$username} </li>>";
-}
-/*
 if(mysqli_num_rows($result)>0)
-{
-    echo"name already exists";
-}
-else
 {
     $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
     if(mysqli_query($db,$sql)){
     } else{
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
-
 }
+else
+{
 
+    echo"name already exists";
+}
 header("location:userView.php");
-*/
+
 
 
 
