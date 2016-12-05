@@ -11,6 +11,11 @@
 <p>The following users have registered on the site:</p>
 <ul>
     <?
+    $sql = 'SELECT * FROM users WHERE username = $username';
+
+    $result1=mysqli_query($sql);
+    echo"<li>{$result1}</li>";
+
     $sql_query="SELECT*FROM users";
     $result = $db->query($sql_query);
     while($row = $result->fetch_array()){
