@@ -29,7 +29,7 @@ if(mysqli_num_rows($result)>0)
 else
 {
 
-    echo"name already exists";
+    alert("NR");
 }
 header("location:userView.php");
 
