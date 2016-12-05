@@ -11,7 +11,8 @@
 <p>The following users have registered on the site:</p>
 <ul>
     <?
-    $sql=mysqli_query("SELECT FROM users (username, password, email) WHERE username=$username");
+    $username = "monco21";
+    $sql="SELECT*FROM users WHERE username=$username";
     $sql_query="SELECT*FROM users";
     $result = $db->query($sql_query);
     while($row = $result->fetch_array()){
