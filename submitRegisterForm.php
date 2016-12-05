@@ -16,6 +16,7 @@ $typeOfUser = $_POST["typeOfUser"];
 
 
 $sql=mysqli_query("SELECT FROM users (username, password, email) WHERE username=$username");
+print "<h2>$sq1</h2>";
 if(mysql_num_rows($sql)>=1)
 {
     echo"name already exists";
