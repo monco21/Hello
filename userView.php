@@ -12,7 +12,7 @@
 <ul>
     <?
     $username = "monco21";
-    $sql="SELECT*FROM users WHERE username=$username";
+    $sql="SELECT * FROM users WHERE username=$username";
     $sql_query="SELECT*FROM users";
     $result = $db->query($sql_query);
     while($row = $result->fetch_array()){
