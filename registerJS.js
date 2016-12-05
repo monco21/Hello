@@ -18,6 +18,4 @@ function myFunction() {
         alert("Passwords Match!!!");
     }
     return ok;
-}/**
- * Created by gerry on 5.12.2016 г..
- */
+}
