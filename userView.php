@@ -11,14 +11,16 @@
 <p>The following users have registered on the site:</p>
 <ul>
     <?
-    $username = "monco21";
-    $sql=mysqli_query("SELECT * FROM users WHERE username=$username");
+
     $sql_query="SELECT*FROM users";
     $result = $db->query($sql_query);
     while($row = $result->fetch_array()){
         $username = $row['username'];
-
-        echo "<li>{$sql} </li>>";
+        $password = $row['password'];
+        $email = $_POST["email"];
+        $phoneNumber = $_POST["phoneNumber"];
+        $typeOfUser = $_POST["typeOfUser"];
+        echo "<li>{$username}   {$password}  {$email}   {$phoneNumber} {$typeOfUser}</li>>";
     }
     ?>
 </ul>
