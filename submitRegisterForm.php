@@ -14,22 +14,25 @@ $email = $_POST["email"];
 $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
+$sql = "SELECT * FROM tbl_Freelancers WHERE username = '".$username."'";
+$result = mysqli_query($con,$query);
 
-$sql= ("SELECT FROM users (username, password, email, phoneNumber,typeOfUser) WHERE username=$username");
-if(mysql_num_rows($sql)>=1)
+if(mysqli_num_rows($result)>=1)//You are mixing the mysql and mysqli, change this line of code
 {
     echo"name already exists";
 }
-else
-{
+else {
+
     $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
-}
 
-
-
-    if(mysqli_query($db,$sql)){
-    } else{
-        echo "Error: ".$sql."<br>".mysqli_error($db);
+    if (mysqli_query($db, $sql)) {
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($db);
     }
+}
 header("location:userView.php");
+
+
+
+
 ?>
