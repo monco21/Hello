@@ -1,19 +1,15 @@
 <?php
-define('DB_SERVER','eu-cdbr-azure-north-e.cloudapp.net');
-define('DB_USERNAME','bf059db43a1be2');
-define('DB_PASSWORD','a1369579');
-define('DB_DATABASE','sms');
+/**
+ * Created by PhpStorm.
+ * User: Simeon
+ * Date: 5.12.2016 г.
+ * Time: 12:52
+ */
+include ("dbconnect.php");
 
-$db=mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
-$db=new mysqli(
-    'eu-cdbr-azure-north-e.cloudapp.net',
-    'bf059db43a1be2',
-    'a1369579',
-    'sms'
-);
+$connected = mysqli_select_db("sms",$db);
 
-$selected = mysqli_select_db("sms",$db);
 
 $username = $_POST["username"];
 $password = $_POST["password"];
@@ -25,10 +21,24 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 
 
-mysqli_query("INSERT INTO users (username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')");
+$query = "SELECT * FROM users WHERE username ='$username'";
+$result = mysqli_query($query);
 
-echo("User created");
+$count = mysqli_num_rows($result);
 
+if($count < 1)
+{
+    echo"name already exists";
+}
+else
+{
+    $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
+    echo "Registration success";
+    if(mysqli_query($db,$sql)){
+    } else{
+        echo "Error: ".$sql."<br>".mysqli_error($db);
+    }
+}
 ?>
 
 /**
