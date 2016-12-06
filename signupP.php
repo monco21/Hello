@@ -26,7 +26,7 @@ $result = mysqli_query($query);
 
 $count = mysqli_num_rows($result);
 
-if($count < 1)
+if($count > 1)
 {
     echo"name already exists";
 }
