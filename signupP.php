@@ -21,23 +21,19 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 
 
-$query = "SELECT * FROM users WHERE username ='$username'";
-$result = mysqli_query($query);
+$query = mysqli_query("SELECT * FROM users WHERE Username ='$username'");
 
-$count = mysqli_num_rows($result);
 
-if($count > 1)
+
+if(mysqli_num_rows($query) > 0)
 {
     echo"name already exists";
 }
 else
 {
-    $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
+    mysqli_query("INSERT INTO users(Username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')");
     echo "Registration success";
-    if(mysqli_query($db,$sql)){
-    } else{
-        echo "Error: ".$sql."<br>".mysqli_error($db);
-    }
+    header("location:userView.php");
 }
 ?>
 
