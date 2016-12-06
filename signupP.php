@@ -33,7 +33,7 @@ else
 {
     mysqli_query("INSERT INTO users(Username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')");
     echo "Registration success";
-    header("location:userView.php");
+
 }
 ?>
 
