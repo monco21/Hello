@@ -21,21 +21,17 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 
 
-$sql="SELECT FROM users (username, password, email) WHERE username LIKE $username";
-$count=0;
-$result = $db->query($sql);
-while($row = $result->fetch_array()) {
-    $username = $row['username'];
-    $count++;
-}
+$sql= mysqli_query("SELECT * FROM users WHERE Username = '$username'");
+$result = mysqli_num_rows($sql);
 
-if($count > 0)
+
+if($result > 0)
 {
     echo"name already exists";
 }
 else
 {
-    $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
+    $sql = "INSERT INTO users(Username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
     if(mysqli_query($db,$sql)){
     } else{
         echo "Error: ".$sql."<br>".mysqli_error($db);
