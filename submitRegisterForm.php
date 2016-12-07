@@ -24,11 +24,11 @@ $password = stripslashes($password);
 $sql="SELECT FROM users (username, password, email) WHERE username=$username";
 $result = $db->query($sql);
 
-while($row = $result->fetch_array()){
+while($row = $result->fetch_array()) {
     $username = $row['username'];
     $count++;
-
-if($count>0)
+}
+if($count > 0)
 {
     echo"name already exists";
 }
@@ -43,7 +43,6 @@ else
 
 header("location:userView.php");
 
-
-
-
 ?>
+
+
