@@ -13,6 +13,17 @@ if(isset($_POST['submit'])){
     $query = $mysqli->query("SELECT * FROM users WHERE username = '$username'");
     if($query->num_rows != 0){
         $output = "That User Name already taken ";
+    }else{
+        //Encrypt the password
+        $password = md5($password);
+        //Insert the record
+        $insert = $mysqli->query("INSERT INTO users(username,password,email) VALUES ('$username','$password','$email')");
+        if($insert != true){
+            $output = "There was a problem <br/>";
+            $output .= $mysqli->error;
+        }else{
+            $output = "You have been registered!";
+        }
     }
 
 }
