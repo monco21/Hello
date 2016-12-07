@@ -11,7 +11,6 @@
 <p>The following users have registered on the site:</p>
 <ul>
     <?
-
     $sql_query="SELECT*FROM users";
     $result = $db->query($sql_query);
     while($row = $result->fetch_array()){
@@ -20,7 +19,7 @@
         $email = $_POST["email"];
         $phoneNumber = $_POST["phoneNumber"];
         $typeOfUser = $_POST["typeOfUser"];
-        echo "<li>{$username}   {$password}  {$email}   {$phoneNumber} {$typeOfUser}</li>>";
+        echo "<li>{$username}   {$password}  {$email}   {$phoneNumber} {$typeOFUser}</li>";
     }
     ?>
 </ul>

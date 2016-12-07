@@ -21,9 +21,16 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 
 
-$sql= mysqli_query("SELECT * FROM users WHERE Username = '$username'");
-$result = mysqli_num_rows($sql);
+/*$sql= mysqli_query("SELECT * FROM users WHERE Username = '$username'");
 
+$result = mysqli_num_rows($sql);*/
+
+$sql_query="SELECT*FROM users WHERE username = '$username'";
+$result = $db->query($sql_query);
+while($row = $result->fetch_array()) {
+    $username = $row['username'];
+    echo "<li>{$username} </li>";
+}
 
 if($result > 0)
 {
