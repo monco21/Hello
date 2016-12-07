@@ -8,7 +8,7 @@
 include ("dbconnect.php");
 
 
-
+$connected = mysqli_select_db("sms",$db);
 
 
 $username = $_POST["username"];
@@ -17,36 +17,31 @@ $email = $_POST["email"];
 $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
-$username = stripslashes($username);
-$password = stripslashes($password);
 
 
-/*$sql= mysqli_query("SELECT * FROM users WHERE Username = '$username'");
+$sql=mysqli_query("SELECT FROM users (username, password, email) WHERE username=$username");
 
-$result = mysqli_num_rows($sql);*/
-
-$sql_query="SELECT*FROM users WHERE username = '$username'";
-$result = $db->query($sql_query);
-while($row = $result->fetch_array()) {
-    $username = $row['username'];
-    echo "<li>{$username} </li>";
-}
-
-if($result > 0)
+if(mysql_num_rows($sql)>=1)
 {
     echo"name already exists";
 }
 else
 {
-    $sql = "INSERT INTO users(Username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
+    $sql = "INSERT INTO users(username,password,email,phoneNumber,typeOfUser) VALUES ('$username','$password','$email','$phoneNumber','$typeOfUser')";
     if(mysqli_query($db,$sql)){
     } else{
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
 }
 
+
+
+
+
+
 header("location:userView.php");
 
+
+
+
 ?>
-
-
