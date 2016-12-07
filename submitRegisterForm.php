@@ -17,9 +17,8 @@ $email = $_POST["email"];
 $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
+$sql=mysqli_query("SELECT FROM users (username, password, email) WHERE username=$username");
 
-
-$sql=mysqli_query("SELECT * FROM users (username, password, email) WHERE username=$username");
 if(mysql_num_rows($sql)>=1)
 {
     echo"name already exists";
