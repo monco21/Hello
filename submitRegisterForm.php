@@ -11,9 +11,9 @@ include ("dbconnect.php");
 
 
 
-$username = $_POST["username1"];
-$password = $_POST["password1"];
-$email = $_POST["email1"];
+$username = $_POST["username"];
+$password = $_POST["password"];
+$email = $_POST["email"];
 $phoneNumber = $_POST["phoneNumber"];
 $typeOfUser = $_POST["typeOfUser"];
 
