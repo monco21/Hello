@@ -10,6 +10,11 @@ if(isset($_POST['submit'])){
     $rpassword = $mysqli->real_escape_string($_POST['rpassword']);
     $email =    $mysqli->real_escape_string ($_POST['email']);
 
+    $query = $mysqli->query("SELECT * FROM users WHERE username = '$username'");
+    if($query->num_rows != 0){
+        $output = "That User Name already taken ";
+    }
+
 }
 ?>
 
@@ -25,7 +30,7 @@ if(isset($_POST['submit'])){
         </tr>
         <tr>
             <td>Repeat Password:</td>
-            <td><input type="passsword" name="rpassword"/></td>
+            <td><input type="password" name="rpassword"/></td>
         </tr>
         <tr>
             <td>Email:</td>
