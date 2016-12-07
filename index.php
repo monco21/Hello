@@ -4,6 +4,12 @@ $output = null;
 if(isset($_POST['submit'])){
     //Connect to db
     $mysqli =  NEW MySQLi('eu-cdbr-azure-north-e.cloudapp.net','bf059db43a1be2','a1369579','sms');
+
+    $username = $mysqli->real_escape_string($_POST['username']);
+    $password = $mysqli->real_escape_string ($_POST['password']);
+    $rpassword = $mysqli->real_escape_string($_POST['rpassword']);
+    $email =    $mysqli->real_escape_string ($_POST['email']);
+
 }
 ?>
 
