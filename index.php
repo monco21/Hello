@@ -1,3 +1,12 @@
+<?PHP
+$output = null;
+
+if(isset($_POST['submit'])){
+    //Connect to db
+    $mysqli =  NEW MySQLi('eu-cdbr-azure-north-e.cloudapp.net','bf059db43a1be2','a1369579','sms');
+}
+?>
+
 <form method="post">
     <table>
     <tr>
@@ -20,3 +29,7 @@
 
     <input type="submit" name="submit" value="Register"/>
 </form>
+
+<?PHP
+echo $output;
+?>
