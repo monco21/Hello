@@ -8,7 +8,7 @@
 include ("dbconnect.php");
 
 
-$connected = mysqli_select_db("sms",$db);
+
 
 
 $username = $_POST["username"];
@@ -21,10 +21,14 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 
 
-$sql=mysqli_query("SELECT FROM users (username, password, email) WHERE username=$username");
+$sql="SELECT FROM users (username, password, email) WHERE username=$username";
+$result = $db->query($sql);
 
+while($row = $result->fetch_array()){
+    $username = $row['username'];
+    $count++;
 
-if(mysql_num_rows($sql)>0)
+if($count>0)
 {
     echo"name already exists";
 }
@@ -36,11 +40,6 @@ else
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
 }
-
-
-
-
-
 
 header("location:userView.php");
 
