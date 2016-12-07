@@ -8,7 +8,6 @@
 include ("dbconnect.php");
 
 
-$connected = mysqli_select_db("sms",$db);
 
 
 $username = $_POST["username"];
