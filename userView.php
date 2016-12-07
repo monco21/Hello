@@ -14,9 +14,9 @@
     $sql_query="SELECT*FROM users";
     $result = $db->query($sql_query);
     while($row = $result->fetch_array()){
-        $username = $row['username'];
-        $password = $row['password'];
-        $email = $_POST["email"];
+        $username = $row['username1'];
+        $password = $row['password1'];
+        $email = $_POST["email1"];
         $phoneNumber = $_POST["phoneNumber"];
         $typeOfUser = $_POST["typeOfUser"];
         echo "<li>{$username}   {$password}  {$email}   {$phoneNumber} {$typeOFUser}</li>";
