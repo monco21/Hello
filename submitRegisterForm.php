@@ -20,13 +20,7 @@ $typeOfUser = $_POST["typeOfUser"];
 
 
 $sql=mysqli_query("SELECT * FROM users (username, password, email) WHERE username=$username");
-    $count = 0;
-$query = "SELECT * FROM users WHERE username LIKE $username";
-if($username = $query){
-    $count +1;
-}
-
-if(count > 0)
+if(mysql_num_rows($sql)>=1)
 {
     echo"name already exists";
 }
@@ -38,6 +32,11 @@ else
         echo "Error: ".$sql."<br>".mysqli_error($db);
     }
 }
+
+
+
+
+
 
 header("location:userView.php");
 
